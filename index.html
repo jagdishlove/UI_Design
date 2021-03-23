@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Sidebar #1</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div  class='row'>
+      <div style="top:-60px;background-color:#F8F8F8; height:900px; border-radius: 10px;" class="col-md-12 col">
+        
+       
+       <h1 style="margin-top:65px">
+        <img  class="rounded-circle" src="./images/2.jpg" >   
+        Hii Jagdish,</h1>
+        
+        
+  </div>
+    
+    
+
+    <div class='row row1'>
+      <div  class="col-12 col2">
+       <h2 style="margin-right: 40px;">Today</h2><br/>
+       <h1 style="margin-left:20px">$19,892</h1>
+       <h6 style="color:#ADADAD ;margin-left:20px">Account Balance</h6><br/>
+       <h3 style="margin-right: 10px;">$4,000</h3>
+       <h6 style="color:#ADADAD ;margin-left:20px">Account Balance</h6><br/>
+       <h3 style="margin-right: 10px;">$4,000</h3>
+       <h6 style="color:#ADADAD ;margin-left:20px">Account Balance</h6>
+       <button  type="button"  class="btn btn-secondary dropdown-toggle">I want to...</button>
+      </div>
+      
+    
+    </div>
+     
+
+   
+    <div style="margin-top: 75vh;" class='row row2'>
+      <div style="margin-right:40px" class="col col3">
+        <h3>Recent Transactions</h3>
+        <br/>
+        <h6 style="margin-right: 11rem;">2020-08-07</h6>
+        <h6 >Withdrawal Transffer to Bank-XXX11</h6>
+        <hr/>
+        <h6 style="margin-right: 11rem;">2020-08-07</h6>
+        <h6 >Withdrawal Transffer to Bank-XXX11</h6>
+        <hr/>
+        <h6 style="margin-right: 11rem;">2020-08-07</h6>
+        <h6 >Withdrawal Transffer to Bank-XXX11</h6>
+
+      </div>
+    </div>
+   
+    </div>
+    
+    
+    </div>
+    
+    
+  </div>
+  
+
+ 
+
+
+
+
+<!-- Side nav bar -->
+  <aside class="sidebar">
+    <div class="toggle">
+      <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+    <div class="side-inner">
+
+      <div class="logo-wrap">
+        <div class="logo">
+          <span>C</span>
+        </div>
+        <span class="logo-text">Company</span>
+      </div>
+
+      <div class="search-form">
+        <form action="#">
+          <span class="wrap-icon">
+            <span class="icon-search2"></span>
+          </span>
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li class="active"><a href="#" class="d-flex align-items-center"><span
+                class="wrap-icon icon-home2 mr-3"></span><span class="menu-text">Home</span></a></li>
+          <li><a href="#" class="d-flex align-items-center"><span class="wrap-icon icon-videocam mr-3"></span><span
+                class="menu-text">Videos</span></a></li>
+          <li><a href="#" class="d-flex align-items-center"><span class="wrap-icon icon-book mr-3"></span><span
+                class="menu-text">Books</span></a></li>
+          <li><a href="#" class="d-flex align-items-center"><span class="wrap-icon icon-person mr-3"></span><span
+                class="menu-text">Store</span></a></li>
+                
+          <li><a href="#" class="d-flex align-items-center "><span class="wrap-icon icon-bell mr-3"></span><span
+                class="menu-text">Analytics</span></a></li>
+          <li><a href="#" class="d-flex align-items-center"><span class="wrap-icon icon-sign-out mr-3"></span><span
+                class="menu-text">Settings</span></a></li>
+         
+                
+        </ul>
+      </div>
+      
+    </div>
+</div>
+</aside>
+
+
+<!-- Bar chart -->
+
+  
+<div id="chartContainer" style="height: 370px; width: 30%; margin-left:450px; display: flex; position: absolute; margin-top:200px;">
+  <script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title:{
+        text: "Contributions overtime",
+        fontFamily: "arial black",
+        fontColor: "black"
+        
+      },
+      axisX: {
+        interval: 1,
+        intervalType: "numbers"
+      },
+      axisY:{
+        valueFormatString:"$#0",
+        gridColor: "grey",
+        tickColor: "#B6B1A8"
+      },
+      toolTip: {
+        shared: true,
+        content: toolTipContent
+      },
+      data: [{
+        type: "stackedColumn",
+        showInLegend: true,
+        color: "#0800A3",
+        name: "Employees",
+        dataPoints: [
+          { y: 6.75, x: new Date(2010,0) },
+          { y: 8.57, x: new Date(2011,0) },
+          { y: 10.64, x: new Date(2012,0) },
+          { y: 13.97, x: new Date(2013,0) },
+          { y: 15.42, x: new Date(2014,0) },
+          { y: 17.26, x: new Date(2015,0) },
+          { y: 20.26, x: new Date(2016,0) },
+          { y: 25.26, x: new Date(2017,0) },
+          { y: 28.26, x: new Date(2018,0) },
+          { y: 32.26, x: new Date(2019,0) },
+          { y: 35.26, x: new Date(2020,0) },
+          { y: 38.26, x: new Date(2021,0) },
+          { y: 42.26, x: new Date(2022,0) },
+        ]
+        },
+        {        
+          type: "stackedColumn",
+          showInLegend: true,
+          name: "Employee",
+          color: "#4935FF",
+          dataPoints: [
+            { y: 6.82, x: new Date(2010,0) },
+            { y: 9.02, x: new Date(2011,0) },
+            { y: 11.80, x: new Date(2012,0) },
+            { y: 14.11, x: new Date(2013,0) },
+            { y: 15.96, x: new Date(2014,0) },
+            { y: 17.73, x: new Date(2015,0) },
+            { y: 21.5, x: new Date(2016,0) },
+            { y: 21.5, x: new Date(2017,0) },
+            { y: 25.5, x: new Date(2018,0) },
+            { y: 28.5, x: new Date(2019,0) },
+            { y: 32.5, x: new Date(2020,0) },
+            { y: 35.5, x: new Date(2021,0) },
+            { y: 38.5, x: new Date(2022,0) },
+          ]
+        },
+        {        
+          type: "stackedColumn",
+          showInLegend: true,
+          name: "Total Intrest",
+          color: "#85AFFF",
+          dataPoints: [
+            { y: 7.28, x: new Date(2010,0) },
+            { y: 9.72, x: new Date(2011,0) },
+            { y: 13.30, x: new Date(2012,0) },
+            { y: 14.9, x: new Date(2013,0) },
+            { y: 18.10, x: new Date(2014,0) },
+            { y: 18.68, x: new Date(2015,0) },
+            { y: 22.45, x: new Date(2016,0) },
+            { y: 22.45, x: new Date(2017,0) },
+            { y: 22.45, x: new Date(2018,0) },
+            { y: 22.45, x: new Date(2019,0) },
+            { y: 25.45, x: new Date(2020,0) },
+            { y: 28.45, x: new Date(2021,0) },
+            { y: 32.45, x: new Date(2022,0) },
+
+            
+          ]
+        }
+        ]
+    });
+    chart.render();
+    
+    function toolTipContent(e) {
+      var str = "";
+      var total = 0;
+      var str2, str3;
+      for (var i = 0; i < e.entries.length; i++){
+        var  str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\"> "+e.entries[i].dataSeries.name+"</span>: $<strong>"+e.entries[i].dataPoint.y+"</strong>bn<br/>";
+        total = e.entries[i].dataPoint.y + total;
+        str = str.concat(str1);
+      }
+      
+    }
+    
+    }
+    </script>
+</div>
+
+<div class="container">
+  <div class="column">
+    <h1>Retirementt Strategy</h1>
+    <div class="range-slider">
+      <h6 style="margin-left: 40px;">Employee Contribution</h6>
+      <input class="range-slider__range" type="range" value="400" min="0" max="500">
+      <span class="range-slider__value">12%</span>
+    </div> 
+    <div class="range-slider">
+      <h6 style="margin-left: 40px;">Employee Age</h6>
+      <input class="range-slider__range" type="range" value="400" min="0" max="500">
+      <span class="range-slider__value">60</span>
+    </div> 
+    <hr style="width:80%"/>
+
+    <h6 style="margin-left:40px">Employer Contribution 8.5%</h6><br/>
+    <h6 style="margin-left:40px">Intrest Rate 5%</h6><br/>
+    <button  style="border-radius: 10px; width:50%;margin-left: 5rem;" type="button"  class="btn btn-secondary">Update</button>
+    <br/>
+    <br/>
+    <h6 style="margin-left:8rem; color:darkblue">View Help Docs ></h6>
+  </div>
+</div>
+
+
+
+
+<!-- Second Bottom nav bar -->
+    <div class="site-section">
+      <div class="nav">
+        <nav class="nav">
+          <a href="#" class="nav__link">
+            <i class="wrap-icon icon-home2 "></i>
+            <span class="nav__text"></span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="wrap-icon icon-home"></i>
+            <span class="nav__text"></span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="wrap-icon icon-user"></i>
+            <span class="nav__text"></span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="wrap-icon icon-user"></i>
+            <span class="nav__text"></span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="wrap-icon icon-search"></i>
+            <span class="nav__text"></span>
+          </a>
+        </nav>
+  
+  
+
+  
+
+  </div>
+  </div>
+  
+  
+
+  
+
+
+  
+ 
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="./js/Rangeslider.js"></script>
+
+
+
+</body>
+
+</html>

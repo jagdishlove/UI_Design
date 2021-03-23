@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Contributions Overtime",
+		fontFamily: "arial black",
+		fontColor: "black"
+	},
+	axisX: {
+		interval: 1,
+		intervalType: "year"
+	},
+	axisY:{
+		valueFormatString:"$#0",
+		gridColor: "gray",
+		tickColor: ""
+	},
+	toolTip: {
+		shared: true,
+		content: toolTipContent
+	},
+	data: [{
+        type: "stackedColumn",
+        showInLegend: true,
+        color: "#0800A3",
+        name: "Employees",
+        dataPoints: [
+          { y: 6.75, x: new Date(2010,0) },
+          { y: 8.57, x: new Date(2011,0) },
+          { y: 10.64, x: new Date(2012,0) },
+          { y: 13.97, x: new Date(2013,0) },
+          { y: 15.42, x: new Date(2014,0) },
+          { y: 17.26, x: new Date(2015,0) },
+          { y: 20.26, x: new Date(2016,0) },
+          { y: 25.26, x: new Date(2017,0) },
+          { y: 28.26, x: new Date(2018,0) },
+          { y: 32.26, x: new Date(2019,0) },
+          { y: 35.26, x: new Date(2020,0) },
+          { y: 38.26, x: new Date(2021,0) },
+          { y: 42.26, x: new Date(2022,0) },
+        ]
+        },
+        {        
+          type: "stackedColumn",
+          showInLegend: true,
+          name: "Employee",
+          color: "#4935FF",
+          dataPoints: [
+            { y: 6.82, x: new Date(2010,0) },
+            { y: 9.02, x: new Date(2011,0) },
+            { y: 11.80, x: new Date(2012,0) },
+            { y: 14.11, x: new Date(2013,0) },
+            { y: 15.96, x: new Date(2014,0) },
+            { y: 17.73, x: new Date(2015,0) },
+            { y: 21.5, x: new Date(2016,0) },
+            { y: 21.5, x: new Date(2017,0) },
+            { y: 25.5, x: new Date(2018,0) },
+            { y: 28.5, x: new Date(2019,0) },
+            { y: 32.5, x: new Date(2020,0) },
+            { y: 35.5, x: new Date(2021,0) },
+            { y: 38.5, x: new Date(2022,0) },
+          ]
+        },
+        {        
+          type: "stackedColumn",
+          showInLegend: true,
+          name: "Total Intrest",
+          color: "#85AFFF",
+          dataPoints: [
+            { y: 7.28, x: new Date(2010,0) },
+            { y: 9.72, x: new Date(2011,0) },
+            { y: 13.30, x: new Date(2012,0) },
+            { y: 14.9, x: new Date(2013,0) },
+            { y: 18.10, x: new Date(2014,0) },
+            { y: 18.68, x: new Date(2015,0) },
+            { y: 22.45, x: new Date(2016,0) },
+            { y: 22.45, x: new Date(2017,0) },
+            { y: 22.45, x: new Date(2018,0) },
+            { y: 22.45, x: new Date(2019,0) },
+            { y: 25.45, x: new Date(2020,0) },
+            { y: 28.45, x: new Date(2021,0) },
+            { y: 32.45, x: new Date(2022,0) },
+
+            
+          ]
+        }
+        ]
+    });
+chart.render();
+
+function toolTipContent(e) {
+	
+	var total = 0;
+
+	for (var i = 0; i < e.entries.length; i++){
+		var  str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\"> "+"</span>: $<strong>"+e.entries[i].dataPoint.y+"</strong>bn<br/>";
+		total = e.entries[i].dataPoint.y + total;
+		str = str.concat(str1);
+	}
+	
+	return (str2.concat(str)).concat(str3);
+}
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 420px; ;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
